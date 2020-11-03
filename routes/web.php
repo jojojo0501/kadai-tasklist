@@ -11,6 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',"TasksController@index");
+
+Route::resource("tasks","TasksController");
+
+// practice
+// Route::get("tasks/{id}","TasksController@show");
+// Route::post("tasks","TasksController@store");
+// Route::put("tasks/{id}","TasksController@update");
+// Route::delete("tasks/{id}","TasksController@destroy");
+// Route::get("tasks","TasksController@index");
+// Route::post("tasks/create","TasksController@create");
+// Route::delete("tasks/{id}","TasksController@destroy");
+// Route::get("tasks/{id}/edit","TasksController@edit");
