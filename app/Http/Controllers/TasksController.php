@@ -26,7 +26,7 @@ class TasksController extends Controller
     public function create()
     {
         $tasks = new Task;
-        return view("tasks.create",[tasks => $tasks]);
+        return view("tasks.create",["tasks" => $tasks]);
     }
 
     /**
