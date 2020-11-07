@@ -18,7 +18,7 @@
                 <tr>
                     <td>{!! link_to_route("tasks.show",$task->id,["task"=>$task->id])!!}</td>
                     <td>{{$task->content}}</td>
-                    <td>{{$task->title}}</td>
+                    <td>{{$task->status}}</td>
                 </tr>
             </tbody>
                 <?php } ?> 
