@@ -20,7 +20,14 @@
                 <div class="collapse navbar-collapse" id="nav-bar">
                     <ul class="navbar-nav mr-auto"></ul>
                     <ul class="navbar-nav">
-                         <li class="nav-item">{!! link_to_route('tasks.create', '新規タスク登録', [], ['class' => 'nav-link']) !!}</li>
+                        @if (Auth::check())
+                         <li>{!! link_to_route('tasks.create', '新規タスク登録', [], ['class' => 'nav-link']) !!}</li>
+                         
+                         <li>{!! link_to_route("logout.get","Logout",[],["class"=>"nav-item nav-link"]) !!}</li>
+                         @else
+                         <li>{!! link_to_route("login.post","Login",[],["class"=>"nav-item nav-link"]) !!}</li>
+                         <li>{!! link_to_route('signup.get', 'Signup', [], ['class' => 'nav-item nav-link']) !!}</li>
+                         @endif
                     </ul>
                 </div>
             </nav>

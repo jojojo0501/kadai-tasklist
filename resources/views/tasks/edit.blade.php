@@ -8,6 +8,10 @@
             {!! Form::model($task, ['route' => ['tasks.update', $task->id], 'method' => 'put']) !!}
 
                 <div class="form-group">
+                    {!! Form::label('user_id', 'user_id:') !!}
+                       {{ $tasks->user_id }} 
+                </div>
+                <div class="form-group">
                     {!! Form::label('content', 'タスク:') !!}
                     {!! Form::text('content', null, ['class' => 'form-control']) !!}
                 </div>
